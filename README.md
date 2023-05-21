@@ -13,7 +13,7 @@ Kafka是由Apache基金会开发的分布式流处理平台，采用发布-订�
 
 ![输入图片说明](images/1.png)
 
-这里只是讲解kafka容器快速部署，用于测试和学习作用，生成不建议使用容器部署，想了解更多的kafka知识点可参考我这篇文章：[Kafka原理介绍+安装+基本操作](https://blog.csdn.net/qq_35745940/article/details/121688517)
+这里只是讲解kafka容器快速部署，用于测试和学习作用，生成不建议使用容器部署，想了解更多的kafka知识点可参考我这篇文章：[Kafka原理介绍+安装+基本操作](https://mp.weixin.qq.com/s?__biz=MzI3MDM5NjgwNg==&mid=2247486467&idx=1&sn=8a92efe6658f3cba30ac4f1d708a6d36&chksm=ead0f0eadda779fc31ac6e5b03a134041918a3c4b80c9195b07408fa651d5f06a25081a59d3f&token=1796595267&lang=zh_CN#rd)
 
 ## 二、前期准备
 ### 1）部署 docker
@@ -58,7 +58,7 @@ Zookeeper在Kafka中扮演重要的角色，主要用于管理Kafka集群的元�
 
 - **分布式锁**：Zookeeper提供群众同步的机制，使得多个Kafka Broker的协调和管理变得可行。Kafka中的一些操作需要集群中的所有Broker都达成一致意见，因此需要使用ZK协调器的分布式锁机制来维护这些操作的一致性，并防止数据的意外损坏。
 
-Zookeeper快速部署教程可参考我上一篇文章：[【中间件】通过 docker-compose 快速部署 Zookeeper 保姆级教程](https://blog.csdn.net/qq_35745940/article/details/130774794)
+Zookeeper快速部署教程可参考我上一篇文章：[【中间件】通过 docker-compose 快速部署 Zookeeper 保姆级教程](https://mp.weixin.qq.com/s?__biz=MzI3MDM5NjgwNg==&mid=2247487997&idx=1&sn=ef0dc95033f374dc8cc76aeb149e459d&chksm=ead0ed14dda76402a396a826913159826efa9e727cf8033986eec006f9b821afec07e065ca6c&token=1796595267&lang=zh_CN#rd)
 
 总之，Zookeeper在Kafka集群中发挥了重要的角色，它管理着**Kafka的发布/订阅机制、Broker状态信息、Topic的元数据信息等**，使得Kafka集群的分布式协同和协调变得可能。在Kafka写操作（生产者或管理员在Kafka生产或维护上修改了配置）上，ZK用于协作锁定。在Kafka读操作（消费者将订阅的主题分区元数据读取到kafka消费者中）上，ZK用于协作。
 
